@@ -18,3 +18,5 @@ class Annotation(models.Model):
     dataitem = models.ForeignKey(Dataitem, on_delete=models.CASCADE)
     last_modified_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='last_modifiede_by')
     last_modified_at = models.DateTimeField(auto_now_add=True)
+    label = models.TextField(blank=True)
+    description = models.TextField(blank=True)
